@@ -8,14 +8,11 @@ const error = document.querySelector('.error')
 const breedSelect = document.querySelector('.breed-select');
 const catCard = document.querySelector('.cat-info')
 
-
-
 function catSelectList(breeds) {
     breeds.forEach(({ value, label }) => {
       breedSelect.insertAdjacentHTML(
         'beforeend',
         `<option value="${value}">${label}</option>`,
-
       );
     });
     loader.classList.add('hidden')
@@ -29,6 +26,8 @@ breedSelect.addEventListener('change', selectedBreed)
 fetchBreeds()
     .then(breeds => {
       catSelectList(breeds);
+      breedSelect.classList.remove('hidden')
+
     });
 
 function selectedBreed() {
@@ -60,6 +59,5 @@ function renderCatCard(cat) {
     </div>
   </div>`
 loader.classList.add('hidden')
-
 }
     
