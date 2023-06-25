@@ -1,2 +1,70 @@
 @import './common';
 @import './example';
+    body {
+        background-color: gray;
+    }
+    .cat-card {
+        position: relative;
+    }
+    .description {
+        padding: 0 20px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        opacity: 50%;
+    }
+    .container {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+    .cat-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+    .breed-select {
+        max-width: 400px;
+        min-height: 50px;
+        margin: 50px auto;
+    }
+    .loader {
+        left: 50%;
+        top: 50%;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border-radius: 50%;
+        background: #fff;
+        animation: wave 1s ease-in infinite;
+      }
+      
+      @keyframes wave {
+       0% {  box-shadow:
+        0 0 0 0px rgba(255, 255,255, 1),
+        0 0 0 20px rgba(255, 255,255, 0.2),
+        0 0 0 40px rgba(255, 255,255, 0.6),
+        0 0 0 60px rgba(255, 255,255, 0.4),
+        0 0 0 80px rgba(255, 255,255, 0.2)
+        }
+        100% {  box-shadow:
+          0 0 0 80px rgba(255, 255,255, 0),
+          0 0 0 60px rgba(255, 255,255, 0.2),
+          0 0 0 40px rgba(255, 255,255, 0.4),
+          0 0 0 20px rgba(255, 255,255, 0.6),
+          0 0 0 0px rgba(255, 255,255, 1)
+        }
+      }
+      
+       
+  .hidden {
+    display: none;
+}
+img {
+    max-width: 1080px;
+}
